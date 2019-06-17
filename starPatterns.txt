@@ -1,0 +1,191 @@
+class StarPatterns
+{
+    public static void displayTheKiteWithDiagonals()
+    {
+        System.out.println("dddd");
+        int x=5;
+        int y=5;
+        int z=-3;
+        int p=13;
+        for(int i=1;i<=9;i++)
+        {
+            for(int j=1;j<=9;j++)
+            {
+                if(j==x||j==y)
+                {
+                    System.out.print("* ");
+                }
+                else if(i==5||j==5)
+                {
+                    System.out.print("* ");
+                }
+                else if(j==z||j==p)
+                {
+                    System.out.print("* ");
+                }
+                else
+                {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+            x--;
+            y++;
+            z++;
+            p--;
+        }
+    }
+    public static void displayTheHollowRightAngledTriangle()
+    {
+        for(int i=1;i<=6;i++)
+        {
+            for(int j=1;j<=6;j++)
+            {
+                if(i==j||j==1||i==6)
+                {
+                    System.out.print("* ");
+                }
+                else
+                {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void displayTheHollowTriangle()
+    {
+        int x=5;
+        int y=5;
+        for(int i=1;i<=5;i++)
+        {
+            for(int j=1;j<=9;j++)
+            {
+                if(j==x||j==y)
+                {
+                    System.out.print("* ");
+                }
+                else if(i==5)
+                {
+                    System.out.print("* ");
+                }
+                else
+                {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+            x--;
+            y++;
+        }
+    }
+    public static void displayThePlusSymbol()
+    {
+        for(int i=1;i<=5;i++)
+        {
+            for(int j=1;j<=5;j++)
+            {
+                if(j==3||i==3)
+                {
+                    System.out.print("* ");
+                }
+                else
+                {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void displayThePyramid1()
+    {
+        for(int i=1;i<=5;i++)
+        {
+            for(int j=5;j>=1;j--)
+            {
+                if(i>=j)
+                {
+                    System.out.print("* ");
+                }
+                else
+                {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void displayTheHollowKite()
+    {
+        int a=5;
+        int b=a;
+        int c=-3;
+        int d=13;
+        for(int i=1;i<=9;i++)
+        {
+            for(int j=1;j<=9;j++)
+            {
+                if(j==a||j==b)
+                {
+                    System.out.print("* ");
+                }
+                else if(j==c||j==d)
+                {
+                    System.out.print("* ");
+                }
+                else
+                {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+            a--;
+            b++;
+            c++;
+            d--;
+        }
+    }
+    public static void displayTheParallelogram()
+    {
+        int x=1;int y=9;
+        for(int i=1;i<=5;i++)
+        {
+            for(int j=1;j<=y;j++)
+            {
+                if(j<x||j>y)
+                {
+                    System.out.print("  ");
+                }
+                else
+                {
+                    System.out.print("* ");
+                }
+            }
+            x++;
+            y++;
+            System.out.println();
+        }
+    }
+    public static void main(String []args)
+    {
+        StarPatterns.displayTheParallelogram();
+        System.out.println();
+        System.out.println();
+        StarPatterns.displayTheHollowKite();
+        System.out.println();
+        System.out.println();
+        StarPatterns.displayThePyramid1();
+        System.out.println();
+        System.out.println();
+        StarPatterns.displayThePlusSymbol();
+        System.out.println();
+        System.out.println();
+        StarPatterns.displayTheHollowTriangle();
+        System.out.println();
+        System.out.println();
+        StarPatterns.displayTheHollowRightAngledTriangle();
+        System.out.println();
+        System.out.println();
+        StarPatterns.displayTheKiteWithDiagonals();
+    }
+}
